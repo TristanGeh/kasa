@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom"
+
 function Error() {
     return (
-        <div>
-            <h1>C'est pas la bonne page loulou</h1>
-        </div>
+        <main>
+            <div>404</div>
+            <h2>Oups! La page que vous avez demandez n'existe pas.</h2>
+            <Link to="/">Retourner sur la pade d'accueil</Link>
+        </main>
     )
 }
 

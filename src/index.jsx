@@ -1,17 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Route, BrowserRouter as Router, Routes} from 'react-router-dom'
-import Home from './pages/home/Home'
-import Housing from './pages/housing/Housing'
-import About from './pages/about/About'
-import Header from './components/Header/header'
-import Error from './components/Error/error'
-import Footer from './components/Footer/footer'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Housing from './pages/Housing/Housing';
+import About from './pages/About/About';
+import Header from './components/Header/header';
+import Error from './components/Error/error';
+import Footer from './components/Footer/footer';
 
- 
-ReactDOM.createRoot(
-  document.getElementById('root')
-).render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Header />
@@ -23,5 +20,5 @@ ReactDOM.createRoot(
       </Routes>
       <Footer />
     </Router>
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);
