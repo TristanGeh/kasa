@@ -1,0 +1,21 @@
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    
+    p {
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 24px;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+}

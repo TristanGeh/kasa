@@ -1,0 +1,27 @@
+article {
+    background: #F6F6F6;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 70px 5vw 40px 5vw;
+
+    .cards {
+        position: relative;
+        margin: 50px 0 0 0;
+        padding-bottom: 50px;
+        img {
+            border-radius: 10px;
+            width: 340px;
+            height: 340px;
+            object-fit: cover;
+        }
+        h2 {
+            position: absolute;
+            top: 285px;
+            left: 15px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+    }
+}

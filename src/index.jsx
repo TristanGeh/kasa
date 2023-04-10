@@ -8,6 +8,8 @@ import Header from './components/Header/header';
 import Error from './components/Error/error';
 import Footer from './components/Footer/footer';
 
+import './assets/minireset/minireset.css'
+
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>

@@ -1,0 +1,36 @@
+section {
+  display: flex;
+  justify-content: center;
+  margin: 70px 5vw 0 5vw;
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 25px;
+}
+section img {
+  background: black;
+  mix-blend-mode: darken;
+  border-radius: 25px;
+  height: 220px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  z-index: 2;
+}
+section h1 {
+  font-size: 48px;
+  color: white;
+  position: absolute;
+  top: 40%;
+  z-index: 3;
+}/*# sourceMappingURL=banner.css.map */
