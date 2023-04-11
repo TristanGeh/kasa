@@ -1,0 +1,19 @@
+.error-section, .error-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+  margin: 31px 12vw 0 12vw;
+}
+.error-section .error, .error-link .error {
+  font-weight: 700;
+  font-size: 1530%;
+}
+.error-section h2, .error-link h2 {
+  font-size: 36px;
+}
+.error-section a, .error-link a {
+  font-size: 18px;
+  margin: 150px 0 130px 0;
+}/*# sourceMappingURL=error.css.map */

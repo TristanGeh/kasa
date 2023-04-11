@@ -1,10 +1,10 @@
-section {
+.banner-section {
   display: flex;
   justify-content: center;
   margin: 70px 5vw 0 5vw;
   position: relative;
 }
-section::before {
+.banner-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@ section::before {
   z-index: 1;
   border-radius: 25px;
 }
-section img {
+.banner-section img {
   background: black;
   mix-blend-mode: darken;
   border-radius: 25px;
@@ -27,7 +27,7 @@ section img {
      object-position: 50% 50%;
   z-index: 2;
 }
-section h1 {
+.banner-section h1 {
   font-size: 48px;
   color: white;
   position: absolute;

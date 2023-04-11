@@ -1,11 +1,10 @@
-import bannerimg from '../../assets/home-title.png'
 import './banner.scss'
 
-function Banner() {
+function Banner(props) {
     return (
-        <section>
-            <img src={bannerimg} alt="Falaise sur mer" />
-            <h1>Chez vous, partout et ailleurs</h1>
+        <section className='banner-section'>
+            <img src={props.src} alt={props.alt} />
+            {props.showTitle ? <h1>Chez vous, partout et ailleurs</h1> : null}
         </section>
     )
 }
