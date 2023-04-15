@@ -1,24 +1,36 @@
-import { useState } from "react"
-import './collapse.scss'
+import { useState } from "react";
+import "./collapse.scss";
 
 function Collapse(props) {
   const [open, setOpen] = useState(null);
 
-  const renderContent = (data, index) => {
-    if (props.contentType === "description") {
+  const renderContent = (data, contentType) => {
+    const index = Array.isArray(props.contentType)
+      ? props.contentType.indexOf(contentType)
+      : 0;
+
+    if (contentType === "description") {
       return (
-        <section key={data.id}>
-          <div className="title" onClick={() => setOpen(open === index ? null : index)}>
+        <section key={`description-${data.id}`}>
+          <div
+            className="title"
+            onClick={() => setOpen(open === index ? null : index)}
+          >
             <span>Description</span>
             <img src={props.arrow} alt="Arrow icon" />
           </div>
-          {open === index ? <div className="content">{data.description}</div> : null}
+          {open === index ? (
+            <div className="content">{data.description}</div>
+          ) : null}
         </section>
-      )
-    } else if (props.contentType === "equipements") {
+      );
+    } else if (contentType === "equipements") {
       return (
-        <section key={data.id}>
-          <div className="title" onClick={() => setOpen(open === index ? null : index)}>
+        <section key={`equipements-${data.id}`}>
+          <div
+            className="title"
+            onClick={() => setOpen(open === index ? null : index)}
+          >
             <span>Équipements</span>
             <img src={props.arrow} alt="Arrow icon" />
           </div>
@@ -30,21 +42,36 @@ function Collapse(props) {
             </div>
           ) : null}
         </section>
-      )
-    } else if (props.contentType === "about") {
-      return (
-        <section key={data.title}>
-          <div className="title" onClick={() => setOpen(open === index ? null : index)}>
-            <span>{data.title}</span>
+      );
+    } else if (contentType === "about") {
+      return data.map((item, subIndex) => (
+        <section key={item.title}>
+          <div
+            className="title"
+            onClick={() => setOpen(open === subIndex ? null : subIndex)}
+          >
+            <span>{item.title}</span>
             <img src={props.arrow} alt="Arrow icon" />
           </div>
-          {open === index ? <div className="content">{data.rules}</div> : null}
+          {open === subIndex ? (
+            <div className="content">{item.rules}</div>
+          ) : null}
         </section>
-      )
+      ));
     }
-  }
+  };
 
-  return <section>{props.data.map((item, index) => renderContent(item, index))}</section>;
+  const renderCollapse = (contentType) => {
+    if (Array.isArray(contentType)) {
+      return contentType.map((type) => renderContent(props.data, type));
+    } else {
+      return renderContent(props.data, contentType);
+    }
+  };
+
+  return (
+    <section className="collapse">{renderCollapse(props.contentType)}</section>
+  );
 }
 
 export default Collapse;

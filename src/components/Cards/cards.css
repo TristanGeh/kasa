@@ -17,6 +17,7 @@ article .cards img {
   height: 340px;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(90%);
 }
 article .cards h2 {
   position: absolute;

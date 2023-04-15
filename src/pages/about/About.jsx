@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner/banner'
 import Collapse from '../../components/Collapse/collapse'
 import aboutData from '../../components/Collapse/about.json'
-import arrow from '../../assets/Vector.svg'
+import arrow from '../../assets/arrow.png'
 import AboutImg from '../../assets/footer-backgroung.png'
 
 function About() {
