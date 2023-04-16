@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./caroussel.scss"
 
 function SlideShow({ images, arrow, title }) {
   const [current, setCurrent] = useState(0)
@@ -28,12 +29,14 @@ function SlideShow({ images, arrow, title }) {
       })}
       {length > 1 && (
         <>
-          <button onClick={prevSlide}>
-            <img src={arrow} alt="Previous" />
-          </button>
-          <button onClick={nextSlide}>
-            <img src={arrow} alt="Next" />
-          </button>
+          <div className="prevNext">
+            <button onClick={prevSlide}>
+              <img src={arrow} alt="Previous" />
+            </button>
+            <button onClick={nextSlide}>
+              <img src={arrow} alt="Next" />
+            </button>
+          </div>
           <p>{currentPoints}</p>
         </>
       )}

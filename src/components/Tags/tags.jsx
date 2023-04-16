@@ -1,6 +1,8 @@
+import "./tags.scss"
+
 function Tags({ tags, id }) {
   return (
-    <div>
+    <div className="tags">
       {tags.map((tag, index) => {
         return <p key={`tags-${id}-${index}`}>{tag}</p>;
       })}

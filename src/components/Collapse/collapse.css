@@ -9,6 +9,7 @@
   padding: 5px 0 5px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .title span {
   font-size: 24px;
@@ -16,6 +17,7 @@
 }
 .title span, .title img {
   margin: 0 18px 0 18px;
+  height: 50%;
 }
 
 .content {
@@ -25,4 +27,30 @@
   background-color: #F6F6F6;
   color: #FF6060;
   font-weight: 400;
+}
+
+.arrow-up {
+  transform: scaleY(-1);
+  transition: transform 0.2s ease;
+}
+
+.arrow-down {
+  transform: scaleY(1);
+  transition: transform 0.2s ease;
+}
+
+.housing-main .collapse-housing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.housing-main .collapse-housing section {
+  width: 40vw;
+}
+.housing-main .collapse-housing .title {
+  margin: 30px 0vw 0 0;
+}
+.housing-main .content-housing {
+  margin: 0;
 }/*# sourceMappingURL=collapse.css.map */

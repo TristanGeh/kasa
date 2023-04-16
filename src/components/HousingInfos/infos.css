@@ -1,0 +1,27 @@
+.housing-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0vw 0 0vw;
+  color: #ff6060;
+}
+.housing-info .profil {
+  display: flex;
+}
+.housing-info .profil img {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+}
+.housing-info .profil p {
+  margin-right: 15px;
+  width: 50%;
+  text-align: right;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 36px !important;
+  font-weight: 500 !important;
+  margin-bottom: 10px !important;
+}/*# sourceMappingURL=infos.css.map */

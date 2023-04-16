@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { createRoot } from 'react-dom/client'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'

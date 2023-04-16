@@ -1,0 +1,44 @@
+.caroussel {
+  position: relative;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.caroussel .slideActive {
+  border-radius: 25px;
+  width: 100%;
+  height: 55vh;
+}
+.caroussel .slideActive img {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.caroussel .prevNext {
+  width: 100%;
+}
+.caroussel button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+}
+.caroussel button:first-child {
+  left: 1vw;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+}
+.caroussel button:last-child {
+  right: 1vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.caroussel p {
+  position: absolute;
+  bottom: 5%;
+  color: white;
+}/*# sourceMappingURL=caroussel.css.map */

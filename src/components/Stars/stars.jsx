@@ -1,6 +1,8 @@
 import grey from '../../assets/grey_star.png'
 import red from '../../assets/red_star.png'
 
+import "./stars.scss"
+
 function Stars({rating}) {
     const greyStarsNumber = 5 - rating
     const redStars = []

@@ -2,40 +2,40 @@ import { useState } from "react";
 import "./collapse.scss";
 
 function Collapse(props) {
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState([]);
 
-  const renderContent = (data, contentType) => {
-    const index = Array.isArray(props.contentType)
-      ? props.contentType.indexOf(contentType)
-      : 0;
+  const handleClick = (index) => {
+    const newOpen = [...open];
+    if (newOpen.includes(index)) {
+      newOpen.splice(newOpen.indexOf(index), 1);
+    } else {
+      newOpen.push(index);
+    }
+    setOpen(newOpen);
+  };
 
+  const renderContent = (data, contentType, index) => {
     if (contentType === "description") {
       return (
         <section key={`description-${data.id}`}>
-          <div
-            className="title"
-            onClick={() => setOpen(open === index ? null : index)}
-          >
+          <div className="title" onClick={() => handleClick(index)}>
             <span>Description</span>
-            <img src={props.arrow} alt="Arrow icon" />
+            <img src={props.arrow} alt="Arrow icon" className={open.includes(index) ? "arrow-up" : "arrow-down"} />
           </div>
-          {open === index ? (
-            <div className="content">{data.description}</div>
+          {open.includes(index) ? (
+            <div className="content content-housing">{data.description}</div>
           ) : null}
         </section>
       );
     } else if (contentType === "equipements") {
       return (
         <section key={`equipements-${data.id}`}>
-          <div
-            className="title"
-            onClick={() => setOpen(open === index ? null : index)}
-          >
+          <div className="title" onClick={() => handleClick(index)}>
             <span>Équipements</span>
-            <img src={props.arrow} alt="Arrow icon" />
+            <img src={props.arrow} alt="Arrow icon"  className={open.includes(index) ? "arrow-up" : "arrow-down"}/>
           </div>
-          {open === index ? (
-            <div className="content">
+          {open.includes(index) ? (
+            <div className="content content-housing">
               {data.equipments.map((equipment) => (
                 <div key={equipment}>{equipment}</div>
               ))}
@@ -46,14 +46,11 @@ function Collapse(props) {
     } else if (contentType === "about") {
       return data.map((item, subIndex) => (
         <section key={item.title}>
-          <div
-            className="title"
-            onClick={() => setOpen(open === subIndex ? null : subIndex)}
-          >
+          <div className="title" onClick={() => handleClick(subIndex)}>
             <span>{item.title}</span>
-            <img src={props.arrow} alt="Arrow icon" />
+            <img src={props.arrow} alt="Arrow icon" className={open.includes(index) ? "arrow-up" : "arrow-down"}/>
           </div>
-          {open === subIndex ? (
+          {open.includes(subIndex) ? (
             <div className="content">{item.rules}</div>
           ) : null}
         </section>
@@ -63,14 +60,18 @@ function Collapse(props) {
 
   const renderCollapse = (contentType) => {
     if (Array.isArray(contentType)) {
-      return contentType.map((type) => renderContent(props.data, type));
+      return contentType.map((type, index) =>
+        renderContent(props.data, type, index)
+      );
     } else {
-      return renderContent(props.data, contentType);
+      return renderContent(props.data, contentType, 0);
     }
   };
 
   return (
-    <section className="collapse">{renderCollapse(props.contentType)}</section>
+    <section className={`collapse ${props.customClass}`}>
+      {renderCollapse(props.contentType)}
+    </section>
   );
 }
 
