@@ -6,7 +6,7 @@ import PageTitle from '../../components/Title/title'
 function Home() {
   return (
     <main>
-      <PageTitle title="Kasa"/>
+      <PageTitle title="Kasa" />
       <Banner src={ImgHome} alt="Falaise au pied de la mer" showTitle={true} />
       <Cards />
     </main>

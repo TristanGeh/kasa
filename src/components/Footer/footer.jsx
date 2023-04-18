@@ -3,14 +3,14 @@ import Rights from './rights'
 import './footer.scss'
 
 function Footer() {
-    return (
-        <footer>
-            <div>
-            <Logo />
-            <Rights />
-            </div>
-        </footer>
-    )
+  return (
+    <footer>
+      <div>
+        <Logo />
+        <Rights />
+      </div>
+    </footer>
+  )
 }
 
 export default Footer

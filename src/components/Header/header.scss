@@ -24,3 +24,24 @@ header {
         }
     }
 }
+
+// Breakpoints 
+
+@media screen and (max-width:768px) {
+    header {
+        max-width: 100%;
+        img {
+            width: 35vw;
+        }
+
+        nav {
+            width: 140px;
+            justify-content: space-between;
+
+            a {
+                font-size: 0.8rem;
+                margin-right: 10px;
+            }
+        }
+    }
+}

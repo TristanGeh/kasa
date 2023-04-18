@@ -1,5 +1,5 @@
 .collapse{
-    margin-bottom: 30vh;
+    margin-bottom: 20vh;
 }
 .title{
     background-color: #FF6060;
@@ -54,4 +54,20 @@
         margin: 0;
     }
 
+}
+// Breakpoints 
+
+@media screen and (max-width: 768px) {
+    .housing-main{
+        .collapse-housing{
+            flex-direction: column;
+        }
+        .title {
+            width: 90vw;
+            margin: 0;
+        }
+        .content-housing{
+            width: 90vw;
+        }
+    }
 }

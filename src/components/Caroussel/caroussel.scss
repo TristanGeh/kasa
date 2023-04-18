@@ -20,7 +20,7 @@
     }
 
     .prevNext{
-        width: 100%;
+        max-width: 10vw;
     }
     button {
         position: absolute;
@@ -44,5 +44,23 @@
         position: absolute;
         bottom: 5%;
         color: white;
+    }
+}
+
+// breakpoints
+
+@media screen and (max-width: 768px) {
+    .caroussel{
+        margin-top: 5vh;
+        .slideActive{
+            max-height: 55vw;
+        }
+        .prevNext img{
+            max-height: 7vw;
+        }
+        p{
+            opacity: 0;
+        }
+
     }
 }

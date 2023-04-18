@@ -1,5 +1,5 @@
 .collapse {
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 }
 
 .title {
@@ -53,4 +53,17 @@
 }
 .housing-main .content-housing {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .housing-main .collapse-housing {
+    flex-direction: column;
+  }
+  .housing-main .title {
+    width: 90vw;
+    margin: 0;
+  }
+  .housing-main .content-housing {
+    width: 90vw;
+  }
 }/*# sourceMappingURL=collapse.css.map */

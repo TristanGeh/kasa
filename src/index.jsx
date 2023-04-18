@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
@@ -22,5 +22,5 @@ createRoot(document.getElementById('root')).render(
       </Routes>
       <Footer />
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

@@ -25,4 +25,20 @@ article .cards h2 {
   left: 15px;
   color: #ffffff;
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  article {
+    background: white;
+    margin: 30px 5vw 0px 5vw;
+  }
+  article .cards {
+    margin: 0;
+  }
 }/*# sourceMappingURL=cards.css.map */

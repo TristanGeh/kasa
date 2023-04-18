@@ -20,7 +20,7 @@
      object-position: center;
 }
 .caroussel .prevNext {
-  width: 100%;
+  max-width: 10vw;
 }
 .caroussel button {
   position: absolute;
@@ -41,4 +41,19 @@
   position: absolute;
   bottom: 5%;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .caroussel {
+    margin-top: 5vh;
+  }
+  .caroussel .slideActive {
+    max-height: 55vw;
+  }
+  .caroussel .prevNext img {
+    max-height: 7vw;
+  }
+  .caroussel p {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=caroussel.css.map */

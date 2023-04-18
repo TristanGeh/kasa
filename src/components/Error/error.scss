@@ -8,7 +8,7 @@
 
     .error{
         font-weight: 700;
-        font-size: 1530%;
+        font-size: 288px;
     }
     h2{
         font-size: 36px;
@@ -16,5 +16,23 @@
     a{
         font-size: 18px;
         margin: 150px 0 130px 0;
+    }
+}
+
+// Breakpoints
+
+@media screen and (max-width:768px) {
+   .error-section {
+       .error{
+           font-size: 96px;
+       }
+       h2{
+        font-size: 18px;
+        text-align: center;
+       }
+       a{
+        font-size: 14px;
+       }
+       
     }
 }

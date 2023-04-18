@@ -8,7 +8,7 @@
 }
 .error-section .error, .error-link .error {
   font-weight: 700;
-  font-size: 1530%;
+  font-size: 288px;
 }
 .error-section h2, .error-link h2 {
   font-size: 36px;
@@ -16,4 +16,17 @@
 .error-section a, .error-link a {
   font-size: 18px;
   margin: 150px 0 130px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .error-section .error {
+    font-size: 96px;
+  }
+  .error-section h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .error-section a {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=error.css.map */

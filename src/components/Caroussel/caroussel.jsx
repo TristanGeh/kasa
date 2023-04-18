@@ -1,5 +1,5 @@
-import { useState } from "react"
-import "./caroussel.scss"
+import { useState } from 'react'
+import './caroussel.scss'
 
 function SlideShow({ images, arrow, title }) {
   const [current, setCurrent] = useState(0)
@@ -7,11 +7,11 @@ function SlideShow({ images, arrow, title }) {
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
-  };
+  }
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1)
-  };
+  }
 
   const currentPoints = `${current + 1}/${length}`
 
@@ -20,7 +20,7 @@ function SlideShow({ images, arrow, title }) {
       {images.map((image, index) => {
         return (
           <div
-            className={index === current ? "slideActive" : "slidePassive"}
+            className={index === current ? 'slideActive' : 'slidePassive'}
             key={index}
           >
             {index === current && <img src={image} alt={title} />}
@@ -41,7 +41,7 @@ function SlideShow({ images, arrow, title }) {
         </>
       )}
     </section>
-  );
+  )
 }
 
-export default SlideShow;
+export default SlideShow

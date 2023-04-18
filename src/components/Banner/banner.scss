@@ -22,3 +22,14 @@
         top: 40%;
     }
 }
+
+// Breakpoints
+
+@media screen and (max-width: 768px) {
+    .banner-section{
+        h1{
+            margin-left: 15px;
+            top: 25%;
+        }
+    }
+}

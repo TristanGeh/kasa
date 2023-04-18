@@ -1,14 +1,14 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function PageTitle({ title }) {
-  const location = useLocation();
+  const location = useLocation()
 
   useEffect(() => {
-    document.title = title;
-  }, [title, location]);
+    document.title = title
+  }, [title, location])
 
-  return null;
+  return null
 }
 
-export default PageTitle;
+export default PageTitle

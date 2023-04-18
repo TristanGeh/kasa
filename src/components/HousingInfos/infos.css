@@ -6,14 +6,14 @@
 }
 .housing-info .profil {
   display: flex;
+  justify-content: space-between;
 }
 .housing-info .profil img {
-  width: 6vw;
-  height: 6vw;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
 }
 .housing-info .profil p {
-  margin-right: 15px;
   width: 50%;
   text-align: right;
   display: flex;
@@ -24,4 +24,29 @@ h1 {
   font-size: 36px !important;
   font-weight: 500 !important;
   margin-bottom: 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .housing-info {
+    flex-direction: column;
+  }
+  .housing-info .housing-info_name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+  .housing-info .housing-info_name .profil {
+    min-width: 15vw;
+    order: 2;
+  }
+  .housing-info .housing-info_name .profil img {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-self: center;
+  }
+  .housing-info .housing-info_name .profil p {
+    margin-right: -25px;
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=infos.css.map */
